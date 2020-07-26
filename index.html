@@ -7,12 +7,46 @@
   <meta name="description" content="this is a sample template for a 960, 12 column grid layout ">
   <meta name="keywords" content="html5,Html 5,HTML5,template,960">
   <title>Sample 960, 12 Column Grid Layout</title>
-  <link rel="stylesheet" type="text/css" href="css960grid.css" />
+  <link rel="stylesheet" type="text/css" href="css/css960grid.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="jquery-3.3.1.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/7657e7afb1.js" crossorigin="anonymous"></script>
 
-  <style>
+ <style>
+.position1{
+position:absolute;
+top:450px;
+left:200px;
+z-index: 5;
+}
+.position1 a:link{color:snow;}
+.pulse{
+width:100px;
+height:100px;
+position:absolute;
+top:430px;
+left:170px;
+border-radius:50%;
+background-color:#5061f6;
+z-index: 0;
+animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0%{box-shadow: 0 0 0 0 rgba(255, 255, 255,0.7),
+    0 0 0 0 rgba(255, 255, 255,0.7);}
+
+  40%{box-shadow: 0 0 0 30px rgba(255, 255, 255,0),
+    0 0 0 0 rgba(255, 255, 255,0.7);}
+
+  80%{box-shadow: 0 0 0 30px rgba(255, 255, 255,0),
+    0 0 0 35px rgba(255, 255, 255,0);}
+
+  100%{box-shadow: 0 0 0 0 rgba(255, 255, 255,0),
+    0 0 0 35px rgba(255, 255, 255,0);}
+}
+
 
   </style>
 </head>
@@ -25,7 +59,7 @@
       <a aria-label="spanish website" href="#"><img src="images/ES_esp.png" width="16" height="16" alt="Spanish flag image"> espanol</a>
     </nav>
 
-    <header class="col_12 first" style="background-color:#000000;color:#ffffff">
+    <header class="col_12 first" ><!--.style="background-color:#05ffff;color:#ffffff"-->
       <div aria-label="Main navigation menu" id='cssmenu'>
         <ul>
           <li>
@@ -95,13 +129,22 @@
         </ul>
       </div>
 
-      <div>
+      <section>
         <img src="images/logoTuki150.png" width="125" height="101" alt="Logo tuki apartments image">&nbsp;
         <div id="heading">
-          <H1 class="header">Tuki Apartments &amp; Bungalows</H1>
-        </div>
+            <H1 class="header">Tuki Apartments &amp; Bungalows</H1>
+            <img class="position" src="images/Model.png">
+<div class="center">
+<div class="pulse"></div>
+<span class="position1" style="font-size: 64px; color: snow;">
+<a href="#top">  <span class="fas fa-angle-double-down"></span></a>
+</span>
+</div>
+</div>
 
-      </div>
+
+
+</section>
 
     </header>
   </div>
@@ -109,7 +152,7 @@
         <div class="col_9 first  " style="background-color:#65A683">
 
         <p>&nbsp;</p></div>
-        <aside class="col_3 last  " style="background-color:#3E575E"><h4>&nbsp; And it�s 1/4 width counterpart</h4><p>Lorem ipsum dolor sit amet,
+        <asideclass="col_3 last " style="background-color:#3E575E"><h4>&nbsp; And it�s 1/4 width counterpart</h4><p>Lorem ipsum dolor sit amet,
         at malis soluta assentior mea, exerci delicata adipiscing at per, pro solet dolores ex. His iisque neglegentur in.
         Nec ad veri nihil nemore. Ubique audire fabulas ne usu, case error nostrum vis an. Vim dictas insolens te,
         ne ornatus verterem nominati eum. Putent constituam inciderint per eu, ad quas fabellas vel, melius forensibus quo id.
@@ -125,7 +168,7 @@
     <section class="col_4 first" style="background-color:#77A2A6">
   </section>
 
-    <section class="col_8 last" style="background-color:#77A2A6">
+    <section  id="top" class="col_8 last" style="background-color:#77A2A6">
       <h2>And I�m a 2/3 width last</h2>
       <p>
         Lorem ipsum dolor sit amet,
